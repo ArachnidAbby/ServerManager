@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Benjamin Austin Jr</author>
+ <class>HassiumServerManager</class>
+ <widget class="QMainWindow" name="HassiumServerManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>[Hassium] ServerManager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QTabWidget" name="ActionTabs">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>191</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="ServerList">
+        <attribute name="title">
+         <string>Servers</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QTreeWidget" name="ServerTreeView">
+           <column>
+            <property name="text">
+             <string>Servers</string>
+            </property>
+           </column>
+           <item>
+            <property name="text">
+             <string>[Online] lobby</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Overview</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Console</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Files</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Plugins</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Configs</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Worlds</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Logs</string>
+              </property>
+             </item>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>[Offline] survival</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Overview</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Console</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Files</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Plugins</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Configs</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Worlds</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Logs</string>
+              </property>
+             </item>
+            </item>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addServerButton">
+           <property name="text">
+            <string>+ Add server</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Git">
+        <attribute name="title">
+         <string>Git</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QWidget" name="Buttons" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="CommitButton">
+              <property name="text">
+               <string>Commit</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="PushButton">
+              <property name="text">
+               <string>Push</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="PullButton">
+              <property name="text">
+               <string>Pull</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ExtrasButton">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="text">
+               <string>⋮</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="CommitMessage">
+           <property name="placeholderText">
+            <string>Commit Message</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Staged Changes</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="StagedChanges">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::DragDrop</enum>
+           </property>
+           <property name="defaultDropAction">
+            <enum>Qt::MoveAction</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Unstaged Changes</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="UnstagedChanges">
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::DragDrop</enum>
+           </property>
+           <property name="defaultDropAction">
+            <enum>Qt::MoveAction</enum>
+           </property>
+           <item>
+            <property name="text">
+             <string>(C)  [Lobby] Server.properties</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>(C)  [Lobby] Plugins/essentials/config.yml</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Team">
+        <attribute name="title">
+         <string>Team</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Members</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="treeWidget">
+           <attribute name="headerCascadingSectionResizes">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="headerMinimumSectionSize">
+            <number>59</number>
+           </attribute>
+           <attribute name="headerDefaultSectionSize">
+            <number>180</number>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>User</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Info</string>
+            </property>
+           </column>
+           <item>
+            <property name="text">
+             <string>Spidertyler2005</string>
+            </property>
+            <property name="text">
+             <string>Owner</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Last Online</string>
+             </property>
+             <property name="text">
+              <string>12/16/21 22:56:17</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Total Commits</string>
+             </property>
+             <property name="text">
+              <string>16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average Commits</string>
+             </property>
+             <property name="text">
+              <string>16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Account Created</string>
+             </property>
+             <property name="text">
+              <string>12/14/21 22:56:17</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Allowed Server</string>
+             </property>
+             <property name="text">
+              <string>*</string>
+             </property>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ricky Bobby</string>
+            </property>
+            <property name="text">
+             <string>Member</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Last Online</string>
+             </property>
+             <property name="text">
+              <string>12/15/21 22:56:17</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Total Commits</string>
+             </property>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Average Commits</string>
+             </property>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Account Created</string>
+             </property>
+             <property name="text">
+              <string>12/14/21 22:56:17</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Allowed Server</string>
+             </property>
+             <property name="text">
+              <string>Lobby</string>
+             </property>
+            </item>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QTabWidget" name="Tabs">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+       <property name="tabsClosable">
+        <bool>true</bool>
+       </property>
+       <property name="movable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>877</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConnect_To_Remote"/>
+    <addaction name="actionDelete_Saved_Files"/>
+   </widget>
+   <widget class="QMenu" name="menuoptions">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionConfigure_Defaults"/>
+    <addaction name="actionConfigure_Default_Plugins"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuoptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConnect_To_Remote">
+   <property name="text">
+    <string>Connect To Remote</string>
+   </property>
+  </action>
+  <action name="actionDelete_Saved_Files">
+   <property name="text">
+    <string>Delete Saved Files</string>
+   </property>
+  </action>
+  <action name="actionConfigure_Defaults">
+   <property name="text">
+    <string>Configure Defaults</string>
+   </property>
+  </action>
+  <action name="actionConfigure_Default_Plugins">
+   <property name="text">
+    <string>Configure Default Plugins</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
