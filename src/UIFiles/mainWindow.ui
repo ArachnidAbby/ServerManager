@@ -50,7 +50,7 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="ServerList">
         <attribute name="title">
@@ -354,7 +354,7 @@
              <string>Ricky Bobby</string>
             </property>
             <property name="text">
-             <string>Member</string>
+             <string>Developer</string>
             </property>
             <item>
              <property name="text">
