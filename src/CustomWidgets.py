@@ -99,7 +99,7 @@ class poggers(QtWidgets.QWidget):
 
 
 import sys
-app = QtWidgets.QApplication(sys.argv)
+app = QtWidgets.QApplication()#sys.argv)
 window = QtWidgets.QMainWindow()
 #window.setLayout(QtWidgets.QVBoxLayout())
 volume = poggers()
