@@ -1,0 +1,24 @@
+# -- app Files --
+
+# AES Keys
+*.clikey
+*.srvkey
+
+# app Configs
+src/data/config.toml
+
+
+# -- language and IDE stuff --
+
+# python
+*.pyc
+*.pyo
+
+# logs
+*.log
+*.tar.gz
+
+# VScode
+
+## line counter plugin
+.VSCodeCounter/*/*.*

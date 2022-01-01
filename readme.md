@@ -12,10 +12,12 @@ On linux, you will need to install a few things from your package manager as wel
 
 a guide can be found [here](https://pythonbasics.org/install-pyqt/)
 
+everything else can be installed using the requirements.txt
+
 ## installing pyqt5 (Windows)
 
 ```shell
-py -m pip install pyqt5
+py -m pip install -r requirements.
 ```
 *`py` might not work on your system. Try `python`,`py3`, or whatever is the command for your system*
 
